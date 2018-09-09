@@ -1,8 +1,11 @@
 package com.felix.magiworld;
 
+import java.util.*;
+
 public abstract class Personnage
 {
     protected int niveau,vie,force,agilite,intelligence;
+    protected Scanner sc = new Scanner(System.in);
     abstract void attaqueBasique(Personnage ennemi);
     abstract void attaqueSpecial(Personnage ennemi);
     protected void setNiveau(int valeur){

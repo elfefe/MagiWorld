@@ -1,6 +1,9 @@
 package com.felix.magiworld;
 
 public class Guerrier extends Personnage {
+    public Guerrier(){
+
+    }
     @Override
     void attaqueBasique(Personnage ennemi) {
         System.out.println("Vous donnez coup d'épée !");
