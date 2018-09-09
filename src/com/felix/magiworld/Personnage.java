@@ -1,6 +1,7 @@
 package com.felix.magiworld;
 
-public abstract class Personnage {
+public abstract class Personnage
+{
     protected int niveau,vie,force,agilite,intelligence;
     abstract void attaqueBasique(Personnage ennemi);
     abstract void attaqueSpecial(Personnage ennemi);
