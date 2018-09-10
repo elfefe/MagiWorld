@@ -2,7 +2,7 @@ package com.felix.magiworld;
 
 public class Guerrier extends Personnage {
     public Guerrier(){
-
+        creationDesPersonnages();
     }
     @Override
     void attaqueBasique(Personnage ennemi) {

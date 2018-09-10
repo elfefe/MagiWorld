@@ -2,7 +2,7 @@ package com.felix.magiworld;
 
 public class Rodeur extends Personnage {
     public Rodeur(){
-
+        creationDesPersonnages();
     }
     @Override
     void attaqueBasique(Personnage ennemi) {
