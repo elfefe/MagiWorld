@@ -3,7 +3,8 @@ package com.felix.magiworld;
 import java.util.*;
 
 public class Mage extends Personnage {
-    public Mage() {
+    public Mage(int joueur) {
+        setClasse("Mage",joueur);
         creationDesPersonnages();
     }
 

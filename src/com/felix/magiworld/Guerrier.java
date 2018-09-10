@@ -1,7 +1,8 @@
 package com.felix.magiworld;
 
 public class Guerrier extends Personnage {
-    public Guerrier(){
+    public Guerrier(int joueur) {
+        setClasse("Guerrier",joueur);
         creationDesPersonnages();
     }
     @Override

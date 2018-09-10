@@ -12,16 +12,13 @@ public class Combat {
             int choixClasse = sc.nextInt();
             switch (choixClasse) {
                 case 1:
-                    joueur = new Mage();
-                    System.out.println("Le joueur "+x+" est un Mage");
+                    joueur = new Mage(x);
                     break;
                 case 2:
-                    joueur = new Guerrier();
-                    System.out.println("Le joueur "+x+" est un Guerrier");
+                    joueur = new Guerrier(x);
                     break;
                 case 3:
-                    joueur = new Rodeur();
-                    System.out.println("Le joueur "+x+" est un Rodeur");
+                    joueur = new Rodeur(x);
                     break;
             }
         }
