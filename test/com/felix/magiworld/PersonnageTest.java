@@ -7,7 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class PersonnageTest {
 
     @Test
-    public void les_phrases_sont_lu_dans_texteCaracteristique() {
+
+    void les_phrases_sont_lu_dans_texteCaracteristique() {
         String []texteCaracteristique = new String[]{
                 "Phrase de texte",
                 "Seconde phrase"
@@ -16,13 +17,13 @@ class PersonnageTest {
     }
 
     @Test
-    public void Le_niveau_et_les_caracteristiques_sequilibrent_bien() {
+    void Le_niveau_et_les_caracteristiques_sequilibrent_bien() {
         int niveau = 10, force = 3, intell = 4, agi = 3;
         assertEquals(niveau,force+intell+agi);
     }
 
     @Test
-    public void le_choix_des_classes_seffectue_sans_soucis(){
+    void le_choix_des_classes_seffectue_sans_soucis(){
         int choix = 1;
         switch (2){
             case 2: assertEquals(1,choix);
@@ -30,7 +31,7 @@ class PersonnageTest {
     }
 
     @Test
-    public void la_zone_de_combat_alerte_correctement_les_joueurs(){
+    void la_zone_de_combat_alerte_correctement_les_joueurs(){
         int partieUne = 1,partieDeux = 2;
         for (int x=0;x<2;x++) {
             if(x==0) {
