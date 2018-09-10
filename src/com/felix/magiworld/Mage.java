@@ -12,6 +12,8 @@ public class Mage extends Personnage {
         System.out.println("Vous lancez une boule de feu !");
         ennemi.caracteristique[4] -= bouleDeFeu;
         System.out.println("Le joueur"+ennemi.joueur+" perd "+bouleDeFeu+" point de vie !");
+        if (ennemi.caracteristique[4]<=0)
+            System.out.println("Joueur " + ennemi.joueur + " est mort");
     }
 
     @Override

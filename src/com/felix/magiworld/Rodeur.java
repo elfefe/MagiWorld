@@ -11,6 +11,8 @@ public class Rodeur extends Personnage {
         System.out.println("Vous effectuez un tir à l'arc !");
         ennemi.caracteristique[4] -= tirAlArc;
         System.out.println("Le joueur"+ennemi.joueur+" perd "+tirAlArc+" point de vie !");
+        if (ennemi.caracteristique[4]<=0)
+            System.out.println("Joueur " + ennemi.joueur + " est mort");
 
     }
 
