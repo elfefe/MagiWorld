@@ -4,9 +4,9 @@ import java.util.*;
 
 public abstract class Personnage
 {
-    protected String classe;
-    protected int joueur;
-    protected int[] caracteristique = new int[5];
+    private String classe;
+    int joueur;
+    int[] caracteristique = new int[5];
     /*
     * caracteristique[0] = niveau
     * caracteristique[1] = force
@@ -14,25 +14,28 @@ public abstract class Personnage
     * caracteristique[3] = intelligence
     * caracteristique[4] = vie
     */
-    protected Scanner sc = new Scanner(System.in);
+    private Scanner sc = new Scanner(System.in);
 
     public abstract void attaqueBasique(Personnage ennemi);
     public abstract void attaqueSpecial(Personnage ennemi);
-    protected String texteCaracteristique(int index){
+    private String texteCaracteristique(int index){
         String[] quelleCaracteristique = new String[]{
-                "Niveau de ton personnage ?",
-                "Force de ton personnage ?",
-                "Agilité de ton personnage ?",
-                "Intelligence de ton personnage ?"
+                "Niveau du personnage ?",
+                "Force du personnage ?",
+                "Agilité du personnage ?",
+                "Intelligence du personnage ?"
         };
         return quelleCaracteristique[index];
     }
-    protected boolean setCaracteristique(int index, int valeur){
+    private boolean setCaracteristique(int index, int valeur){
         caracteristique[index] = valeur;
         caracteristique[4] = 5 * caracteristique[0];
         if (index == 0){
-            if (valeur > 100 || valeur < 1){
+            if (valeur > 100){
                 System.out.println("Votre niveau ne peut être superieur à 100.");
+                return false;
+            }if (valeur < 1){
+                System.out.println("Votre niveau ne peut être inferieur à 1.");
                 return false;
             }
         }else{
@@ -46,7 +49,7 @@ public abstract class Personnage
         }
         return true;
     }
-    protected void ajoutDesPointsDeCaracteristiques(){
+    void ajoutDesPointsDeCaracteristiques(){
         for (int x=0;x<caracteristique.length-1;x++) {
             System.out.println(texteCaracteristique(x));
             int taCaracteristique = sc.nextInt();
@@ -60,7 +63,7 @@ public abstract class Personnage
             }
         }
     }
-    protected void setClasseJoueur(String classe, int joueur){
+    void setClasseJoueur(String classe, int joueur){
         this.classe = classe;
         this.joueur = joueur;
         System.out.println("Le joueur "+joueur+" est un "+classe+" !");

@@ -1,16 +1,16 @@
 package com.felix.magiworld;
 
 public class Rodeur extends Personnage {
-    public Rodeur(int joueur) {
+    Rodeur(int joueur) {
         setClasseJoueur("Rodeur",joueur);
         ajoutDesPointsDeCaracteristiques();
     }
     @Override
     public void attaqueBasique(Personnage ennemi) {
         int tirAlArc = this.caracteristique[2];
-        System.out.println("Vous effectuez un tir à l'arc !");
+        System.out.println("Joueur "+this.joueur+" utilise Tire à l'Arc et inflige "+tirAlArc+" dommages.");
         ennemi.caracteristique[4] -= tirAlArc;
-        System.out.println("Le joueur"+ennemi.joueur+" perd "+tirAlArc+" point de vie !");
+        System.out.println("Le joueur"+ennemi.joueur+" perd "+tirAlArc+" point de vie");
         if (ennemi.caracteristique[4]<=0)
             System.out.println("Joueur " + ennemi.joueur + " est mort");
 
@@ -19,9 +19,8 @@ public class Rodeur extends Personnage {
     @Override
     public void attaqueSpecial(Personnage ennemi) {
         int concentration = this.caracteristique[0] / 2;
-        System.out.println("Vous utilisez votre concentration !");
+        System.out.println("Joueur "+this.joueur+" utilise soin et gagne "+concentration+" en agilité.");
         this.caracteristique[2] += concentration;
-        System.out.println("Le joueur "+this.joueur+" a gagné "+concentration+" en agilité !");
     }
 
 
