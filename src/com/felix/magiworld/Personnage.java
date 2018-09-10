@@ -5,6 +5,7 @@ import java.util.*;
 public abstract class Personnage
 {
     protected String classe;
+    protected int joueur;
     protected int[] caracteristique = new int[5];
     /*
     * caracteristique[0] = niveau
@@ -59,8 +60,9 @@ public abstract class Personnage
             }
         }
     }
-    protected void setClasse(String classe, int joueur){
+    protected void setClasseJoueur(String classe, int joueur){
         this.classe = classe;
+        this.joueur = joueur;
         System.out.println("Le joueur "+joueur+" est un "+classe+" !");
     }
 }
