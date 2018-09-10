@@ -16,8 +16,8 @@ public abstract class Personnage
     */
     protected Scanner sc = new Scanner(System.in);
 
-    abstract void attaqueBasique(Personnage ennemi);
-    abstract void attaqueSpecial(Personnage ennemi);
+    public abstract void attaqueBasique(Personnage ennemi);
+    public abstract void attaqueSpecial(Personnage ennemi);
     protected String texteCaracteristique(int index){
         String[] quelleCaracteristique = new String[]{
                 "Niveau de ton personnage ?",
@@ -46,7 +46,7 @@ public abstract class Personnage
         }
         return true;
     }
-    protected void creationDesPersonnages(){
+    protected void ajoutDesPointsDeCaracteristiques(){
         for (int x=0;x<caracteristique.length-1;x++) {
             System.out.println(texteCaracteristique(x));
             int taCaracteristique = sc.nextInt();

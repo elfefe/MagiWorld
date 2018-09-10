@@ -3,7 +3,7 @@ package com.felix.magiworld;
 public class Mage extends Personnage {
     public Mage(int joueur) {
         setClasseJoueur("Mage",joueur);
-        creationDesPersonnages();
+        ajoutDesPointsDeCaracteristiques();
     }
 
     @Override
@@ -15,7 +15,7 @@ public class Mage extends Personnage {
     }
 
     @Override
-    void attaqueSpecial(Personnage ennemi) {
+    public void attaqueSpecial(Personnage ennemi) {
         int poinDeVieMax = caracteristique[0] * 5;
         int soin = this.caracteristique[3] * 2;
         System.out.println("Vous utilisez soin !");

@@ -3,10 +3,10 @@ package com.felix.magiworld;
 public class Guerrier extends Personnage {
     public Guerrier(int joueur) {
         setClasseJoueur("Guerrier",joueur);
-        creationDesPersonnages();
+        ajoutDesPointsDeCaracteristiques();
     }
     @Override
-    void attaqueBasique(Personnage ennemi) {
+    public void attaqueBasique(Personnage ennemi) {
         int coupdEpee = this.caracteristique[1];
         System.out.println("Vous donnez coup d'épée !");
         ennemi.caracteristique[4] -= coupdEpee;
@@ -14,7 +14,7 @@ public class Guerrier extends Personnage {
     }
 
     @Override
-    void attaqueSpecial(Personnage ennemi) {
+    public void attaqueSpecial(Personnage ennemi) {
         int coupDeRage = this.caracteristique[1] * 2;
         System.out.println("Vous infligez un coup de rage !");
         ennemi.caracteristique[4] -= coupDeRage;

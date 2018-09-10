@@ -30,37 +30,7 @@ class PersonnageTest {
     public void tearDown() throws Exception {
     }
 
-
     @Test
-    void attaqueBasique() {
-    }
-
-    @Test
-    void attaqueSpecial() {
-    }
-
-    @Test
-    void setNiveau() {
-        //fail("Vous ne pouvez être niveau "+101+". Seuls les joueurs de niveau 1 à 100 sont autorisés.");
-    }
-
-    @Test
-    void setVie() {
-           // fail("Vous ne pouvez avoir une caracteristique plus grande que votre niveau !");
-    }
-
-    @Test
-    void setForce() {
-           // fail("Vous ne pouvez avoir une caracteristique plus grande que votre niveau !");
-    }
-
-    @Test
-    void setAgilite() {
-            //fail("Vous ne pouvez avoir une caracteristique plus grande que votre niveau !");
-    }
-
-    @Test
-    void setIntelligence() {
-           // fail("Vous ne pouvez avoir une caracteristique plus grande que votre niveau !");
+    public void Teste_chaques_phrase_de_texteCaracteristique(){
     }
 }
