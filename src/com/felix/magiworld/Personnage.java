@@ -4,23 +4,32 @@ import java.util.*;
 
 public abstract class Personnage
 {
-    protected int niveau,vie,force,agilite,intelligence;
+    protected int[] caracteristique = new int[5];
     protected Scanner sc = new Scanner(System.in);
+
     abstract void attaqueBasique(Personnage ennemi);
     abstract void attaqueSpecial(Personnage ennemi);
-    protected void setNiveau(int valeur){
-        this.niveau = valeur;
+    protected String caracteristique(int index,int valeur){
+        String[] quelleCaracteristique = new String[]{
+                "Niveau de ton personnage ?",
+                "Vie de ton personnage ?",
+                "Force de ton personnage ?",
+                "Agilité de ton personnage ?",
+                "Intelligence de ton personnage ?"
+        };
+        caracteristique[index] = valeur;
+        if (caracteristique[0] > 100|| caracteristique[0] < 0)
+            return "Vous vous êtes trompé, Veuillez recommencer.";
+        return quelleCaracteristique[index];
     }
-    protected void setVie(int valeur){
-        this.vie = valeur;
-    }
-    protected void setForce(int valeur){
-        this.force = valeur;
-    }
-    protected void setAgilite(int valeur){
-        this.agilite = valeur;
-    }
-    protected void setIntelligence(int valeur){
-        this.intelligence = valeur;
+    protected void creationDesPersonnages(){
+        for (int x=0;x<5;x++) {
+            int taCaracteristique = sc.nextInt();
+            if (caracteristique(x, taCaracteristique) == "Vous vous êtes trompé, Veuillez recommencer."){
+                System.out.println(caracteristique(x, taCaracteristique));
+                x--;
+            }
+            else System.out.println(caracteristique(x, taCaracteristique));
+        }
     }
 }

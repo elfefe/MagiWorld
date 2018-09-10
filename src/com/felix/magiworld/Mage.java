@@ -4,14 +4,7 @@ import java.util.*;
 
 public class Mage extends Personnage {
     public Mage() {
-        int taVie = sc.nextInt();
-        setVie(taVie);
-        int taForce = sc.nextInt();
-        setForce(taForce);
-        int tonAgilite = sc.nextInt();
-        setAgilite(tonAgilite);
-        int tonIntelligence = sc.nextInt();
-        setIntelligence(tonIntelligence);
+        creationDesPersonnages();
     }
 
     @Override
@@ -25,4 +18,5 @@ public class Mage extends Personnage {
         System.out.println("Vous utilisez soin !");
 
     }
+
 }
