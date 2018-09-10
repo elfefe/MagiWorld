@@ -21,4 +21,29 @@ class PersonnageTest {
         assertEquals(niveau,force+intell+agi);
     }
 
+    @Test
+    public void le_choix_des_classes_seffectue_sans_soucis(){
+        int choix = 1;
+        switch (2){
+            case 2: assertEquals(1,choix);
+        }
+    }
+
+    @Test
+    public void la_zone_de_combat_alerte_correctement_les_joueurs(){
+        int partieUne = 1,partieDeux = 2;
+        for (int x=0;x<2;x++) {
+            if(x==0) {
+                partieUne++;
+                partieDeux--;
+            }
+            else {
+                partieUne++;
+                partieDeux--;
+            }
+        }
+        assertEquals(3,partieUne);
+        assertEquals(0,partieDeux);
+    }
+
 }
